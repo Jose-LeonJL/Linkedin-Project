@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Linkedin.Net\Linkedin.Net.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="mono_crash.17dd496f8d.0.json" />
+    <None Remove="mono_crash.172fbb4b28.0.json" />
+    <None Remove="mono_crash.17dd496f8d.1.json" />
+    <None Remove="mono_crash.1896d82bcc.0.json" />
+    <None Remove="mono_crash.1944665031.0.json" />
+    <None Remove="mono_crash.1944665031.1.json" />
+    <None Remove="mono_crash.1944665031.2.json" />
+  </ItemGroup>
+
+</Project>

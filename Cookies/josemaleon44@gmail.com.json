@@ -1,0 +1,47 @@
+[
+    {
+        "Name": "lang",
+        "Value": "v=2\u0026lang=en-us",
+        "Domain": "linkedin.com",
+        "Path": "/",
+        "Expires": null,
+        "HttpOnly": false,
+        "Secure": true
+    },
+    {
+        "Name": "JSESSIONID",
+        "Value": "\u0022ajax:0099454319515077237\u0022",
+        "Domain": ".www.linkedin.com",
+        "Path": "/",
+        "Expires": null,
+        "HttpOnly": false,
+        "Secure": true
+    },
+    {
+        "Name": "bcookie",
+        "Value": "\u0022v=2\u0026160c92e2-ace7-4af1-84b6-c0dd287f57c2\u0022",
+        "Domain": ".linkedin.com",
+        "Path": "/",
+        "Expires": "Mon, 27-May-2024 12:08:04 GMT",
+        "HttpOnly": false,
+        "Secure": true
+    },
+    {
+        "Name": "bscookie",
+        "Value": "\u0022v=1\u002620220528003032d547545f-de3f-4f20-8ff9-982006209ac9AQH_446AKHhl_lL9rWngVFhg_UWmfrRe\u0022",
+        "Domain": ".www.linkedin.com",
+        "Path": "/",
+        "Expires": "Mon, 27-May-2024 12:08:04 GMT",
+        "HttpOnly": true,
+        "Secure": true
+    },
+    {
+        "Name": "lidc",
+        "Value": "\u0022b=OGST01:s=O:r=O:a=O:p=O:g=2710:u=1:x=1:i=1653697832:t=1653784232:v=2:sig=AQEY0khyuXk5P0oBMIgwa4ODBd2IF5Jy\u0022",
+        "Domain": ".linkedin.com",
+        "Path": "/",
+        "Expires": "Sun, 29 May 2022 00:30:32 GMT",
+        "HttpOnly": false,
+        "Secure": true
+    }
+]

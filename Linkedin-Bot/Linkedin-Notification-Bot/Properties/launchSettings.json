@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Linkedin-Notification-Bot": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

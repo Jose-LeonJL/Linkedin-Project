@@ -1,0 +1,36 @@
+﻿<Window ResizeMode="NoResize" Height="630" Width="405" x:Class="Linkedin_App_Center.Views.Login "
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Linkedin_App_Center.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="630" d:DesignWidth="405"
+      Title="Login"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}" WindowStartupLocation="CenterScreen">
+
+    <Grid x:Name="Login1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="auto" Width="auto" >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF53BAEA"/>
+                <GradientStop Color="#FFF07777" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Content="Button" HorizontalAlignment="Stretch" Margin="0,392,0,0" Height="66" Width="345"  VerticalAlignment="Top"/>
+        <TextBox 
+            
+            FontSize="11pt" 
+            VerticalContentAlignment="Center" 
+            TextAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Margin="0,171,0,0" 
+            Text="TextBox" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="345" 
+            Height="41"/>
+        <TextBox  FontSize="11pt" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Height="42" Margin="0,273,0,0"/>
+
+    </Grid>
+</Window>

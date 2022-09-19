@@ -1,0 +1,27 @@
+﻿FROM mcr.microsoft.com/dotnet/runtime:3.1 AS base
+ARG token
+ARG database_host
+ARG database_name
+ARG database_user
+ARG database_password
+ARG database_port
+
+WORKDIR /app
+
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+WORKDIR /src
+COPY ["./Linkeding-Bot-Telegram/Linkeding-Bot-Telegram.csproj", "Linkeding-Bot-Telegram/"]
+COPY ["./Linkedin.Net.Models/Linkedin.Net.Models.csproj", "Linkedin.Net.Models/"]
+COPY ["./Linkedin.Net/Linkedin.Net.csproj", "Linkedin.Net/"]
+RUN dotnet restore "Linkeding-Bot-Telegram/Linkeding-Bot-Telegram.csproj"
+COPY . .
+WORKDIR "/src/Linkeding-Bot-Telegram"
+RUN dotnet build "Linkeding-Bot-Telegram.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Linkeding-Bot-Telegram.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Linkeding-Bot-Telegram.dll"]

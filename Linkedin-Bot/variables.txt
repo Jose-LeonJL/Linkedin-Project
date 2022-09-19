@@ -1,0 +1,25 @@
+database_port=6603
+database_password='LMZ23jamas'
+chatid='-746540648'
+token='5340226338:AAG84jlSIQ53Kk2ow-Q80fHlqvh4VIYJo1M'
+database_host='127.0.0.1'
+database_name='linkedinbot'
+database_user='root'e
+
+sudo docker build . -t=packages.algomango.com/algomangodocker/linkedin_notificaciones_bot
+sudo docker push packages.algomango.com/algomangodocker/linkedin_notificaciones_bot
+sudo docker run --name=linkedin-notificaciones-bot -e chatid='-746540648' -e token='5108257872:AAHFpm070jLQNtRYWYSfMAZk-5AjQ-dkNJc' -e database_host='127.0.0.1' -e database_name='linkedinbot' -e database_user='root' -e database_password='LMZ23jamas' -e database_port=6603 -it -d --network='host'  99aa33b0235b
+
+sudo docker build -f DockerfileLinkeding-Bot-Telegram . -t=packages.algomango.com/algomangodocker/linkeding_bot_telegram
+
+sudo docker run --name=l-t-bot  -e token='5108257872:AAHFpm070jLQNtRYWYSfMAZk-5AjQ-dkNJc' -e database_host='127.0.0.1' -e database_name='linkedinbot' -e database_user='root' -e database_password='LMZ23jamas' -e database_port=6603 -it -d --network='host'  1f00058f7b4b
+5340226338:AAG84jlSIQ53Kk2ow-Q80fHlqvh4VIYJo1M
+
+sudo docker run --name=l-t-bot  -e token='5108257872:AAHFpm070jLQNtRYWYSfMAZk-5AjQ-dkNJc' -e database_host='127.0.0.1' -e database_name='linkedinbot' -e database_user='root' -e database_password='LMZ23jamas' -e database_port=6603 -it -d --network='host'  bbc602c061b6
+5340226338:AAG84jlSIQ53Kk2ow-Q80fHlqvh4VIYJo1M
+
+Comando de creacion de la imagen de notificaciones 
+sudo docker build -f DockerfileLinkedin-Notification-Bot . -t='packages.dvstudio.dev/linkedin/linkedin_notificaciones_bot'
+
+sudo docker build -f DockerfileLinkeding-Bot-Telegram . -t='packages.dvstudio.dev/linkedin/linkeding_bot_telegram'
+

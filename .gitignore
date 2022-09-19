@@ -3,6 +3,16 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#Carpeta bin
+*/bin
+/.local-chromium
+
+Linkedin-Web-Scraping/bin/Debug/net6.0/.local-chromium/Win64-970485/chrome-win/chrome.dll
+Linkedin-Web-Scraping/bin/Debug/net6.0/.local-chromium/Win64-970485/chrome-win/interactive_ui_tests.exe
+
+/Linkedin-Web-Scraping/bin/Debug/net6.0/.local-chromium/Win64-970485/chrome-win/interactive_ui_tests.exe
+/Linkedin-Web-Scraping/bin/Debug/net6.0/.local-chromium/Win64-970485/chrome-win/chrome.dll
+
 # User-specific files
 *.rsuser
 *.suo

@@ -1,0 +1,28 @@
+﻿FROM mcr.microsoft.com/dotnet/runtime:6.0 AS base
+ARG chatid
+ARG token
+ARG database_host
+ARG database_name
+ARG database_user
+ARG database_password
+ARG database_port
+
+WORKDIR /app
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+COPY ["./Linkedin-Notification-Bot/Linkedin-Notification-Bot.csproj", "Linkedin-Notification-Bot/"]
+COPY ["./Linkedin.Net.Models/Linkedin.Net.Models.csproj", "Linkedin.Net.Models/"]
+COPY ["./Linkedin.Net/Linkedin.Net.csproj", "Linkedin.Net/"]
+RUN dotnet restore "Linkedin-Notification-Bot/Linkedin-Notification-Bot.csproj"
+COPY . .
+WORKDIR "/src/Linkedin-Notification-Bot"
+RUN dotnet build "Linkedin-Notification-Bot.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Linkedin-Notification-Bot.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Linkedin-Notification-Bot.dll"]
